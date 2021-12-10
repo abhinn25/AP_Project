@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.will.gameController">
+    <children>
+        <ImageView fx:id="hero" fitHeight="40.0" fitWidth="60.0" layoutX="121.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="file:/C:/Users/abhin/IdeaProjects/Will/src/assets/Helmet4.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="pause_button" fitHeight="150.0" fitWidth="200.0" layoutX="1066.0" layoutY="14.0" onMouseClicked="#pause_game" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="file:/C:/Users/abhin/IdeaProjects/Will/src/assets/pause.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
