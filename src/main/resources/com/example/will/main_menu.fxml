@@ -14,12 +14,12 @@
       <ColorAdjust />
    </effect>
    <children>
-      <Button layoutX="14.0" layoutY="316.0" mnemonicParsing="false" text="New Game">
+      <Button fx:id="newgame_button" layoutX="14.0" layoutY="316.0" mnemonicParsing="false" onAction="#start_new_game" text="New Game">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="399.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Continue">
+      <Button fx:id="continue_button" layoutX="14.0" layoutY="399.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Continue">
          <font>
             <Font size="20.0" />
          </font>
@@ -29,12 +29,12 @@
             <Font name="System Bold" size="96.0" />
          </font>
       </TextField>
-      <Button layoutX="14.0" layoutY="482.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Credits">
+      <Button fx:id="credits_button" layoutX="14.0" layoutY="482.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Credits">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="568.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Exit">
+      <Button fx:id="exit_button" layoutX="14.0" layoutY="568.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="123.0" text="Exit">
          <font>
             <Font size="20.0" />
          </font>
