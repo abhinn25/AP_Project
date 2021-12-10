@@ -1,7 +1,20 @@
-FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_menu.fxml"));
+ @FXML
+     void start_new_game(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("level.fxml"));
         Parent root = fxmlLoader.load();
-        HelloController mycontroller= fxmlLoader.getController();
-        Scene scene = new Scene(root);
-        stage.setTitle("Main_menu");
+        controller = fxmlLoader.getController();
+        scene = new Scene(root);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        stage.setTitle("level");
         stage.setScene(scene);
+
+        scene.setOnKeyPressed(event1 -> {
+
+            if(event1.getCode()== KeyCode.SPACE){
+                controller.jump(event1);
+
+            }
+        });
         stage.show();
+    }
