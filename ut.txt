@@ -1,61 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
-package com.example.will;
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-import javafx.animation.TranslateTransition;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-import javafx.util.Duration;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class levelController{
-
-    @FXML
-    private ImageView hero;
-
-    @FXML
-    private ImageView pause_button;
-
-    @FXML
-    void pause_game(MouseEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pause_menu.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setTitle("pause_menu");
-        stage.setScene(scene);
-
-    }
-
-    public void jump(KeyEvent event) {
-        System.out.printf("level");
-        TranslateTransition translate = new TranslateTransition();
-        translate.setNode(hero);
-        translate.setDuration(Duration.millis(100));
-        translate.setCycleCount(TranslateTransition.INDEFINITE);
-        translate.setByY(-100);
-        translate.setAutoReverse(true);
-        translate.play();
-
-
-    }
-
-
-
-
-
-
-
-    }
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.will.levelController{">
+   <children>
+      <ImageView fx:id="hero" fitHeight="40.0" fitWidth="60.0" layoutX="121.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/utkarsh/IdeaProjects/will/src/Orc1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pause_button" fitHeight="150.0" fitWidth="200.0" layoutX="1066.0" layoutY="14.0" onMouseClicked="#pause_game" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/utkarsh/IdeaProjects/will/src/png-clipart-pause-button-logo-creative-commons-license-public-domain-wikimedia-commons-pause-icon-text-trademark.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
